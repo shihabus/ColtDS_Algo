@@ -7,8 +7,7 @@ Application:
     Managing function invocations
     Routing/Browser history
 
-Big O
-
+----Big O-----
 Insertion O(1)
 Removal O(1)
 

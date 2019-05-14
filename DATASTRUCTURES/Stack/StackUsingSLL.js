@@ -14,6 +14,7 @@ class Stack {
 
     // for const time removal and addition
     // the elements are added and removed from head
+    // removal and insertion at the tail is expensive
 
     push(val) {
         let new_node = new Node(val);
