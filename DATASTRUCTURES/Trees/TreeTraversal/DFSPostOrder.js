@@ -55,7 +55,6 @@ class BST {
         return false
     }
 
-    // [ 10, 6, 15, 3, 8, 20 ] 
     BSF() {
         let data = [], // final result
             node = this.root,
@@ -69,6 +68,29 @@ class BST {
             if (node.left) queue.push(node.left)
             if (node.right) queue.push(node.right)
         }
+        return data
+    }
+  
+    DFSPreOder(){
+        let data=[],current=this.root
+        function traverse(node){
+            data.push(node.val)
+            if(node.left) traverse(node.left)
+            if(node.right) traverse(node.right)
+        }
+        traverse(current)
+        return data
+    }
+
+    // [ 3, 8, 6, 20, 15, 10 ] 
+    DFSPostOder(){
+        let data=[],current=this.root
+        function traverse(node){
+            if(node.left) traverse(node.left)
+            if(node.right) traverse(node.right)
+            data.push(node.val)
+        }
+        traverse(current)
         return data
     }
 }

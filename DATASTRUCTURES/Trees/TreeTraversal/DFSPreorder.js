@@ -55,7 +55,6 @@ class BST {
         return false
     }
 
-    // [ 10, 6, 15, 3, 8, 20 ] 
     BSF() {
         let data = [], // final result
             node = this.root,
@@ -71,6 +70,20 @@ class BST {
         }
         return data
     }
+
+    // [ 10, 6, 3, 8, 15, 20 ] 
+    DFSPreOder(){
+        let data=[],
+        current=this.root
+         function traverse(node){
+            data.push(node.val)
+            if(node.left) traverse(node.left)
+            if(node.right) traverse(node.right)
+         }
+         traverse(current)
+
+        return data
+    }   
 }
 
 //         10
